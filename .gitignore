@@ -1,6 +1,9 @@
 node_modules
 .env 
 
+cache/
+artifacts/
+
 # Logs
 logs
 *.log
