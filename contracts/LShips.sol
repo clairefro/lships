@@ -4,11 +4,11 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/access/AccessControl.sol";
 
-contract Lips is ERC721, AccessControl {
+contract LShips is ERC721, AccessControl {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
     constructor(string memory name, string memory symbol)
-        ERC721("Lips", "LIPS")
+        ERC721("LShips", "LIPS")
     {
         _setupRole(DEFAULT_ADMIN_ROLE, msg.sender);
         // TODO: Build initial Ships

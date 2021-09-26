@@ -1,9 +1,9 @@
 async function main() {
-  const Lips = await ethers.getContractFactory("Lips");
+  const LShips = await ethers.getContractFactory("LShips");
 
   // Start deployment, returning a promise that resolves to a contract object
-  const lips = await Lips.deploy();
-  console.log("Contract deployed to address:", lips.address);
+  const lShips = await LShips.deploy();
+  console.log("Contract deployed to address:", lShips.address);
 }
 
 main()
