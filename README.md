@@ -16,6 +16,10 @@ Collect and trade your favorite Ships
 
 `yarn compile`
 
+### Compile + Deploy
+
+`yarn deploy`
+
 ## Planning
 
 Should start with base characters and ships.
@@ -40,8 +44,14 @@ ownerAddress
 
 `getAllShips()`
 
-`mintShip(uint c1Id, uint c2Id, string portmanteau, bool isCanon, address ?ownerAddress)`
+`mintShip(address recipient, uint c1Id, uint c2Id, string portmanteau, bool isCanon, string memory uri)`
 
 - `MINTER_ROLE` only
 
 `addCharacter(string name)`
+
+- `MAINTAINER_ROLE` only
+
+`makeCanon(uint tokenId)`
+
+- `MAINTAINER_ROLE` only
