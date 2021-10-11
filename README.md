@@ -47,6 +47,7 @@ ownerAddress
 `mintShip(address recipient, uint c1Id, uint c2Id, string portmanteau, bool isCanon, string memory uri)`
 
 - `MINTER_ROLE` only
+- require: unique Ship
 
 `addCharacter(string name)`
 
@@ -55,3 +56,7 @@ ownerAddress
 `makeCanon(uint tokenId)`
 
 - `MAINTAINER_ROLE` only
+
+## Notes
+
+- blockchain oracle needed to bridge the on-chain/off-chain worlds
