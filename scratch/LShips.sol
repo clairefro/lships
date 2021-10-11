@@ -37,11 +37,11 @@ contract LShips is ERC721, AccessControl {
         // TODO: Build initial Ships
     }
 
-    function addCharacter(bytes32 name) {
+    function addCharacter(bytes32 _name) {
         var _id = lastCharId;
         var character = characters[_id];
 
-        character.name = name;
+        character.name = _name;
 
         characterIds.push(_id); 
         lastCharId++;
@@ -49,6 +49,10 @@ contract LShips is ERC721, AccessControl {
 
     function getCharacterIds() view public returns (uint[]) {
         return characterIds;
+    }
+
+    function getCharacter(uint _id) view public returns (bytes32) {
+        return (characters[_id].name);
     }
 
     function addShip(uint char1Id, uint char2Id, bytes32 portmanteau) {
@@ -66,6 +70,10 @@ contract LShips is ERC721, AccessControl {
 
     function getShipIds() view public returns (uint[]) {
         return shipIds;
+    }
+
+    function getShip(uint _id) view public returns (uint, uint, bytes32) {
+        return (ships[_id].char1Id, ships[_id].char2Id, ships[_id].portmanteau);
     }
 
     // `supportsInterface` is defined in both the ERC721 and AccessControl contracts. Including an explicit override here
